@@ -28,7 +28,7 @@ class SImage extends StatelessWidget {
     this.color: const Color(0xff2f2e3c),
     this.bgColor: const Color(0xfff5f5f5),
     this.errorColor: const Color(0xffb3b3b3),
-    this.colorBlendMode: BlendMode.dstATop,
+    this.colorBlendMode: BlendMode.dst,
     this.loading: true,
     this.borderRadius,
     this.maxWidthDiskCache,
@@ -46,7 +46,7 @@ class SImage extends StatelessWidget {
         borderRadius: borderRadius ?? BorderRadius.circular(0),
         color: bgColor,
       ),
-      child: Icon(Icons.filter, color: errorColor, size: 55.s),
+      child: Icon(Icons.not_interested, color: errorColor, size: 55.s),
     );
 
     if (url == null || !Uri.parse(url!).isAbsolute) {
