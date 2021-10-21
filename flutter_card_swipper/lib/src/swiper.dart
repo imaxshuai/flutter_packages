@@ -827,7 +827,7 @@ class _TinderState extends _CustomLayoutStateBase<_TinderSwiper> {
     final double s = _getValue(scales, animationValue, i)!;
     final double f = _getValue(offsetsX, animationValue, i)!;
     final double fy = _getValue(offsetsY, animationValue, i)!;
-    final double o = _getValue(opacity, animationValue, i)!;
+    final double o = widget.opciyies != null ? _getValue(opacity, animationValue, i)! : 1.0;
     final double a = _getValue(rotates, animationValue, i)!;
 
     final Alignment alignment = widget.scrollDirection == Axis.horizontal
@@ -931,7 +931,7 @@ class ScaleAndFadeTransformer extends PageTransformer {
   final double? _scale;
   final double? _fade;
 
-  ScaleAndFadeTransformer({double? fade: 0.3, double? scale: 0.8})
+  ScaleAndFadeTransformer({fade: 0.3, scale: 0.8})
       : _fade = fade,
         _scale = scale;
 
