@@ -6,7 +6,6 @@ export 'src/s_image.dart';
 export 'src/commons/common.dart';
 export 'src/log_util.dart';
 export 'src/date_util.dart';
-export 'src/push_notification.dart';
 export 'src/shared_prefs.dart';
 export 'src/timeline_util.dart';
 export 'src/url_link.dart';

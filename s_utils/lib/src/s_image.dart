@@ -26,7 +26,7 @@ class SImage extends StatelessWidget {
     this.fit: BoxFit.cover,
     this.alignment: Alignment.center,
     this.color: const Color(0xff2f2e3c),
-    this.bgColor: const Color(0xfff5f5f5),
+    this.bgColor: const Color(0xffe6e7e8),
     this.errorColor: const Color(0xffb3b3b3),
     this.colorBlendMode: BlendMode.dst,
     this.loading: true,

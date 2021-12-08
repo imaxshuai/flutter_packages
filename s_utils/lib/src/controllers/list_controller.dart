@@ -8,9 +8,7 @@ import '../commons/common.dart';
 abstract class ListController<T> extends GetxController {
   final RefreshController refreshController = RefreshController();
   final listViewStatus = ViewStatus.init.obs;
-  final keyword = "".obs;
   final pagination = PaginationModel().obs;
-  String searchedKeyword = "";
 
   final data = <T>[].obs;
 
@@ -29,7 +27,6 @@ abstract class ListController<T> extends GetxController {
   void fetchData([bool? update]) async {
     if (listViewStatus.value != ViewStatus.init && update != null && update) listViewStatus.value = ViewStatus.init;
     try {
-      searchedKeyword = keyword.value;
       Response res = await request();
       data.value = transformData(res.data['data']);
       pagination(PaginationModel.fromJson(res.data));
