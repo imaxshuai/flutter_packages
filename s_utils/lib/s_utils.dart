@@ -1,6 +1,7 @@
 library s_utils;
 
 export 'src/size.dart';
+export 'src/logger.dart';
 export 'src/app_version.dart';
 export 'src/s_image.dart';
 export 'src/commons/common.dart';
